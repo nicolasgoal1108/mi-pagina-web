@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Tienda Apple</title>
+
+  <style>
+  body {
+    .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(20px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-logo {
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links li {
+  color: rgba(255,255,255,0.8);
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.nav-links li:hover {
+  color: white;
+}
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+body {
+  background: linear-gradient(180deg, #0a0a0a, #111);
+  color: white;
+  padding: 40px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-weight: 600;
+}
+
+.productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+}
+
+.producto {
+  background: rgba(20, 20, 20, 0.55);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+}
+
+.producto:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.35);
+}
+
+.producto img {
+  height: 180px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.producto h3 {
+  color: red
+  font-weight: 500;
+}
+
+.producto p {
+  color: rgba(255, 255, 255, 0.75)
+  margin-bottom: 15px;
+}
+
+.producto button {
+  background: linear-gradient(135deg, #0a84ff, #0066cc);
+  color: white;
+  border: none;
+  padding: 12px; 18px;
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.producto button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(10, 132, 255, 0.4);
+}
+
+.producto {
+  color: #f5f5f7
+}
+
+.producto p {
+  opacity: 0.8;
+}
+
+img {
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+.logo {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+.incluye {
+  display: block;
+  margin-top: 80px;
+  margin-bottom: 100px;
+  max-width: 1100px;
+
+  </style>
+</head>
+
+<body>
+  <nav class="navbar">
+  <div class="nav-logo">💻 Esta página es un ejemplo de lo que puedo crear para tu negocio.</div>
+  <ul class="nav-links">
+    <li>iPhone</li>
+    <li>Mac</li>
+    <li>Soporte</li>
+  </ul>
+</nav>
+
+  <h1>PRODUCTOS APPLE</h1>
+
+  <div class="productos">
+
+    <div class="producto">
+      <img src="img/iphone16.png" style="width: 200px;">
+      <h3>iPhone 16</h3>
+      <p>128 GB · Negro/Blanco</p>
+      <p><strong>$3.500.000</strong></p>
+      <button type="button" onclick="comprarProducto('iPhone 16')">COMPRAR</button>
+    </div>
+
+    <div class="producto">
+      <img src="img/iphone17.png">
+      <h3>iPhone 17</h3>
+      <p>256 GB · Negro/Blanco</p>
+      <p><strong>$4.300.000</strong></p>
+      <button type="button" onclick="comprarProducto('iPhone 17')">COMPRAR</button>
+    </div>
+
+    <div class="producto">
+      <img src="img/iphone17promax.png">
+      <h3>iPhone 17 Pro Max</h3>
+      <p>256 GB · Silver/Azul E-SIM</p>
+      <p><strong>$5.900.000</strong></p>
+      <button type="button" onclick="comprarProducto('iPhone 17 Pro Max')">COMPRAR</button>
+    </div>
+
+    <div class="producto">
+      <img src="img/macbook.png">
+      <h3>MacBook Air</h3>
+      <p>M4 · 16GB RAM · 256GB</p>
+      <p><strong>$4.100.000</strong></p>
+      <button type="button" onclick="comprarProducto('MacBook Air')">COMPRAR</button>
+    </div>
+    
+    <section class="incluye">
+  <h2>¿Qué incluye tu página web?</h2>
+  <ul>
+    <li>Diseño moderno y limpio</li>
+    <li>Botón directo a WhatsApp</li>
+    <li>Adaptada a celular (iPhone y Android)</li>
+    <li>Carga rápida</li>
+    <li>Ideal para negocios pequeños</li>
+  </ul>
+</section>
+
+  </div>
+
+  <script>
+    function comprarProducto(producto) {
+      const telefono = "573233744585"; 
+      const mensaje = "Hola, quiero comprar el " + producto;
+      const url = "https://wa.me/" + telefono + "?text=" + encodeURIComponent(mensaje);
+
+      window.location.href = url;
+    }
+  </script>
+  <section style="margin:40px auto; padding:30px; max-width:900px; background:#111; color:#fff; border-radius:12px; text-align:center;">
+  <h2 style="font-size:28px; margin-bottom:15px;">
+    ¿Quieres una página web como esta?
+  </h2>
+
+  <p style="font-size:18px; margin-bottom:25px;">
+    Diseño páginas web económicas para negocios, emprendimientos y marcas personales.
+  </p>
+
+  <a href="https://wa.me/573233744585?text=Hola%2C%20vi%20tu%20p%C3%A1gina%20web%20de%20ejemplo%20y%20quiero%20una%20p%C3%A1gina%20web%20para%20mi%20negocio"
+     style="display:inline-block; padding:15px 30px; background:#25D366; color:#000; font-weight:bold; border-radius:30px; text-decoration:none; font-size:18px;">
+    📲 Escríbeme por WhatsApp
+  </a>
+</section>
+</body>
+</html>
+
